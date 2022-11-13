@@ -6,4 +6,8 @@
   .link {
     @apply hover:underline cursor-pointer;
   }
+
+  .screen-height{
+    height: calc(100vh - 68px);
+  }
 }
