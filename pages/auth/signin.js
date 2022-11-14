@@ -8,9 +8,9 @@ function SignIn({ providers }) {
         {Object.values(providers).map((provider) => (
           <div key={provider.name} className ='flex flex-col items-center justify-center screen-height'>
             <img
-              src="https://pbs.twimg.com/profile_images/1455185376876826625/s1AjSxph_400x400.jpg"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
               alt="google logo"
-              className="w-52 h-52  object-cover"
+              className="w-52 h-52 object-contain"
             />
             <p className="text-sm italic my-5">This website is created for learning purposes</p>
             <button onClick={() => signIn(provider.id, { callbackUrl: "/" })}
