@@ -10,11 +10,10 @@ function Body() {
   const search = (e) => {
     e.preventDefault();
     if (!input.trim()) return;
-    router.push(`/search?term=${input.trim()}`);
+    router.push(`/search?term=${input.trim()}&searchType=`);
   };
   const randomSearch = (e) => {
     e.preventDefault();
-    console.log("random");
   };
 
   return (
