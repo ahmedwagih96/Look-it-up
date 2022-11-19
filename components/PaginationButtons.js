@@ -38,7 +38,7 @@ function PaginationButtons() {
   };
 
   return (
-    <div className="text-blue-700 pb-4 max-w-xl flex justify-between">
+    <div className="text-blue-700 pb-4 max-w-xl flex justify-between items-center">
       {startIndex > 10 && (
         <Link
           href={`/search?term=${router.query.term}&searchType=${
