@@ -25,7 +25,7 @@ export default search;
 
 export async function getServerSideProps(context) {
   const startIndex = context.query.start || '1'
-  const mockData = false;
+  const mockData = true;
   const { term, searchType } = context.query;
   const data = mockData
     ? Response

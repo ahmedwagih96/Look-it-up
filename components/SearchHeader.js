@@ -1,17 +1,14 @@
-import {
-  MicrophoneIcon,
-  SearchCircleIcon,
-  SearchIcon,
-  XIcon,
-} from "@heroicons/react/solid";
+import { MicrophoneIcon, SearchIcon, XIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { useRef } from "react";
 import { useState } from "react";
 import SearchHeaderOptions from "./SearchHeaderOptions";
 import User from "./User";
 
 function SearchHeader() {
   const router = useRouter();
+  const inputRef = useRef(null);
   const [input, setInput] = useState(router.query.term);
   const submitSearch = (e) => {
     e.preventDefault();
@@ -34,6 +31,7 @@ function SearchHeader() {
           onSubmit={submitSearch}
         >
           <input
+            ref={inputRef}
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
@@ -43,6 +41,7 @@ function SearchHeader() {
             className="h-7 text-gray-500 cursor-pointer md:mr-3"
             onClick={() => {
               setInput("");
+              inputRef.current.focus();
             }}
           />
           <MicrophoneIcon className="h-6 hidden md:inline-flex text-blue-500 pl-4 border-l-2 border-gray-300 mr-3" />
