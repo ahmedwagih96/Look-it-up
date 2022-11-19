@@ -5,8 +5,8 @@ function SearchItem({ item }) {
   return (
     <div className="max-w-xl mb-8">
       <div className="group">
-        <a className='text-sm truncate' href={link} target="_blank">{formattedUrl}</a>
-        <a className='group-hover:underline decoration-color-blue-800' href={link} target="_blank">
+        <a className='text-sm truncate' href={link} target="_blank" rel="noreferrer">{formattedUrl}</a>
+        <a className='group-hover:underline decoration-color-blue-800' href={link} target="_blank" rel="noreferrer">
           <h2 className="truncate text-xl font-medium text-blue-800">{title}</h2>
         </a>
       </div>

@@ -3,8 +3,8 @@ import { useRouter } from "next/router";
 import SearchHeader from "../components/SearchHeader";
 import SearchResults from "../components/SearchResults";
 import Response from "../Response";
-import Footer from "../components/Footer";
-function search({ results }) {
+
+function Search({ results }) {
   console.log(results);
   const router = useRouter();
 
@@ -21,7 +21,7 @@ function search({ results }) {
   );
 }
 
-export default search;
+export default Search;
 
 export async function getServerSideProps(context) {
   const startIndex = context.query.start || "1";
