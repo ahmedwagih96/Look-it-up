@@ -5,12 +5,12 @@ import { useState } from "react";
 
 function Body() {
   const router = useRouter();
-  const [input, setInput] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
 
   const search = (e) => {
     e.preventDefault();
-    if (!input.trim()) return;
-    router.push(`/search?term=${input.trim()}&searchType=`);
+    if (!searchQuery.trim()) return;
+    router.push(`/search?term=${searchQuery.trim()}&searchType=`);
   };
   const randomSearch = async (e) => {
     e.preventDefault();
@@ -33,9 +33,9 @@ function Body() {
       <div className="flex w-[90%] mx-auto px-5 py-3 max-w-[600px] rounded-full mt-5 items-center border border-gray-200 hover:shadow-lg focus-within:shadow-lg gap-3">
         <SearchIcon className="h-5 text-gray-500" />
         <input
-          value={input}
+          value={searchQuery}
           onChange={(e) => {
-            setInput(e.target.value);
+            setSearchQuery(e.target.value);
           }}
           type="text"
           className="border-none outline-none flex-grow"
