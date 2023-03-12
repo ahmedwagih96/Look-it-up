@@ -1,12 +1,12 @@
 import { useSession, signIn, signOut } from "next-auth/react";
 
 function User({ className }) {
-  const { data: session } = useSession();
-  if (session) {
+  const { data } = useSession();
+  if (data?.user) {
     return (
       <>
         <img
-          src={session.user.image}
+          src={data.user.image}
           alt="user image"
           onClick={signOut}
           className={`rounded-full h-10 w-10 hover:bg-gray-200 p-1 cursor-pointer ${className}`}
