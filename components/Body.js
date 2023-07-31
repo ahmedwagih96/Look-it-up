@@ -2,17 +2,21 @@ import Image from "next/image";
 import { SearchIcon, MicrophoneIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import useLoading from "../hooks/useLoading";
 
 function Body() {
+  const {setLoading} = useLoading()
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState("");
 
   const search = (e) => {
+    setLoading(true)
     e.preventDefault();
     if (!searchQuery.trim()) return;
     router.push(`/search?term=${searchQuery.trim()}&searchType=`);
   };
   const randomSearch = async (e) => {
+    setLoading(true)
     e.preventDefault();
     const randomTerm = await fetch(
       "https://random-word-api.herokuapp.com/word?number=1"
