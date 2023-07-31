@@ -4,9 +4,9 @@ function SearchItem({ item }) {
   const { link, formattedUrl, title, htmlSnippet } = item;
   return (
     <div className="mb-8 md:max-w-[70%]">
-      <div className="group">
+      <div className="group max-w-[100%]">
         <a
-          className="text-sm truncate"
+          className="block truncate text-sm"
           href={link}
           target="_blank"
           rel="noreferrer"

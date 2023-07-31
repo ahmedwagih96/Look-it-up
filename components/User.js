@@ -2,6 +2,7 @@ import { useSession, signIn, signOut } from "next-auth/react";
 
 function User({ className }) {
   const { data } = useSession();
+  // If user is signed in show user image
   if (data?.user) {
     return (
       <>
@@ -14,6 +15,7 @@ function User({ className }) {
       </>
     );
   }
+  // If user is not signed in show sign in button
   return (
     <>
       <button
