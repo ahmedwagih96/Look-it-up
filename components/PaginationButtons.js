@@ -25,7 +25,7 @@ function PaginationButtons() {
         {pagesNumber.map((number) => (
           <p
             key={number}
-            className="hover:underline cursor-pointer"
+            className={`hover:underline cursor-pointer ${number === Math.ceil(startIndex/10) && "text-black"}`}
             onClick={() => {
               pageNumberPagination(number);
             }}
