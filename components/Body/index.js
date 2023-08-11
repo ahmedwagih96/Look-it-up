@@ -18,7 +18,7 @@ function Body() {
         width="300"
         height="100"
         className="object-contain"
-        alt="google logo"
+        alt="lookitup logo"
       />
       {/* Inputs and Buttons  */}
       <div className="flex w-[90%] mx-auto px-5 py-3 max-w-[600px] rounded-full mt-5 items-center border border-gray-200 hover:shadow-lg focus-within:shadow-lg gap-3">

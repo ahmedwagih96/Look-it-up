@@ -16,7 +16,7 @@ function SignIn({ providers }) {
               width="300"
               height="100"
               className="object-contain"
-              alt="google logo"
+              alt="lookitup logo"
             />
             <p className="text-sm italic my-5">
               This website is created for learning purposes
