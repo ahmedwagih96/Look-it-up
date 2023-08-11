@@ -14,7 +14,7 @@ function Body() {
     <form className="flex flex-col items-center mt-40" onSubmit={(e)=>search(e, searchQuery)}>
       {/* Body Image */}
       <Image
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
+        src="/landing.png"
         width="300"
         height="100"
         className="object-contain"

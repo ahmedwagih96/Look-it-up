@@ -10,11 +10,11 @@ function SearchHeader() {
     <header className="sticky top-0 bg-white">
       <div className="flex w-full p-2 md:p-6 items-center gap-2 md:gap-6">
         <Image
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
+          src="/logo.png"
           width="80"
           height="30"
           className="object-contain cursor-pointer"
-          alt="google logo"
+          alt="look it up logo"
           onClick={() => router.push("/")}
         />
         <Form />

@@ -7,7 +7,7 @@ function Buttons() {
     <div className="flex flex-col sm:flex-row gap-2 mt-5">
       {/* User Search */}
       <button type="submit" className="search-btn">
-        Google Search
+        Search
       </button>
       {/* Random Search */}
       <button className="search-btn" onClick={(e) => randomSearch(e)}>
